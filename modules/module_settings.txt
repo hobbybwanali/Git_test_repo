@@ -1,0 +1,14 @@
+import board
+import digitalio
+import time
+
+# Initialize the built-in LED
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+
+# Blink the LED
+while True:
+    led.value = True   # Turn LED on
+    time.sleep(0.5)    # Wait 0.5 seconds
+    led.value = False  # Turn LED off
+    time.sleep(1)    # Wait 0.5 seconds
